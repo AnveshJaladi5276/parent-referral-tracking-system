@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Referral Tracking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Parent Referral Tracking System</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Total Referrals</h3>
+                <p id="totalReferrals">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <p id="pendingReferrals">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Converted</h3>
+                <p id="convertedReferrals">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Rewards</h3>
+                <p id="rewardAmount">₹0</p>
+            </div>
+        </div>
+
+        <h2>Add Referral</h2>
+
+        <form id="referralForm">
+            <input type="text" id="parentName" placeholder="Parent Name" required>
+
+            <input type="text" id="childName" placeholder="Child Name" required>
+
+            <select id="status">
+                <option value="Pending">Pending</option>
+                <option value="Follow-Up">Follow-Up</option>
+                <option value="Converted">Converted</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+
+            <button type="submit">Add Referral</button>
+        </form>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Parent Name..."
+            class="search-box"
+        >
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Parent</th>
+                    <th>Child</th>
+                    <th>Status</th>
+                    <th>Reward</th>
+                </tr>
+            </thead>
+
+            <tbody id="referralTableBody">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
